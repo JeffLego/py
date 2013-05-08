@@ -47,7 +47,7 @@ def updateRecord():
 		from person import Person #make/store new one for key
 		record = Person(name='?', age='?') #eval: strings must be quoted
 	for field in fieldnames:
-		setattr(record, field, eval(entrie[field].get()))
+		setattr(record, field, eval(entries[field].get()))
 	db[key] = record
 
 db = shelve.open(shelvename)
